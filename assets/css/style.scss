@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    background-color: #131720!important;
+}
+
+a {
+    transition: 0.5s ease;
+    text-decoration: none!important;
+}
+
+ul {
+    list-style: none;
+}
+
+a:hover, a:active, a:focus {
+    outline: none;
+    text-decoration: none;
+}
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #131720;
+    transition: 0.5s, margin 0s;
+     
+    .navbar {
+        align-items: baseline;
+
+        .logo {
+            display: block;
+            color: #fff;
+            &__blue {
+                color: #2f80ed;
+            }
+        }
+    }
+}
+
+form#submit {
+    display: flex;
+}
+
+.searchBar {
+    display: block;
+
+   &__formGroup {
+       display: flex;
+   }
+   .search {
+        width: 280px;
+    }      
+}
+button.searchBtn {
+    width: 4em; border: none; border-radius: 5px; background: #2f80ed;
+}
+.searchBtn {
+    width: 3em;
+    color: #fff!important;
+    &:hover {
+      border-color: #2f80ed;
+    }
+    &:focus {
+        box-shadow: none!important;
+      }
+  }
+.movieListTitle {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.card {
+    margin-top: 30px;
+    border: none!important;
+    background-color: transparent!important;
+
+    &:hover &__cover img {
+        transform: scale(1.06);
+    filter: blur(1px);
+    }
+    &:hover &__rating {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &:hover &__title a {
+        color: #2f80ed;
+    }
+
+    &__cover {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 2;
+            background: linear-gradient(
+        180deg
+        , rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 75%, rgba(0,0,0,0.9) 100%);
+            opacity: 0.1;
+            transition: 0.5s;
+        }
+
+        img {
+            min-height: 465px;
+        }
+    }
+
+    &__rating {
+        display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+    transition: 0.5s;
+    opacity: 0;
+    pointer-events: none;
+    height: 30px;
+    width: auto;
+    padding: 0 10px;
+    transform: scale(0.8);
+    border-radius: 10px;
+    background-color: rgba(21,31,48,0.75);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+
+        svg {
+    width: 2em;
+    height: auto;
+    fill: #2f80ed;
+    transition: fill 0.5s;
+    margin-right: 5px;
+        }
+    }
+
+    &__title {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        transition: 0.5s;
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        text-align: center;
+
+        a {
+            color: #fff;
+        }
+    }
+}
+
+.basketBtn {
+    align-self: center;
+}
+
+.detailImg {
+    overflow: hidden;
+    &:hover img {
+        transform: scale(1.08);
+        transition: transform 0.5s;
+    }
+}
+
+
+.details {
+    background-color: rgba(255, 255, 255, 0.025);
+    width: 100%;
+    height: 80%;
+
+    h2 {
+        color: #fff;
+        padding: 0.5em 1em;
+    }
+
+    .list-group {
+        margin: 1em;
+        height: 450px;
+        &__item {
+            margin: 1em 0;
+            color: #fff;
+            strong {
+                color: #2f80ed;
+                margin-right: 0.5em;
+            }
+        }
+    }
+
+    .addToStorageBtn {
+        padding: 0.5em;
+        margin: 1em 0.5em 1.2em;
+        color: #fff;
+        background-color: #2f80ed;
+
+        &:hover {
+            color: #2f80ed;
+            background-color: #fff;
+        }
+    }
+}
+
+.well {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+    a {
+        color: #fff!important;
+
+        &:hover {
+            background-color: #2f80ed;
+        }
+    }
+}
+
+.list {
+    padding-left: 0;
+  
+
+    &__listItem img{
+        width: 200px;
+    }
+}
+
+
+#result-heading {
+    visibility: hidden;
+}

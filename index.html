@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <title>Movies List Page</title>
+</head>
+<body>
+    <header class="header">
+       <nav class="navbar">
+        <div class="logo">
+            <h2>Movie <span class="logo__blue">App</span></h2>
+        </div>
+        <div class="searchBar">
+          <div class="searchBar__formGroup">
+            <form class="flex" id="submit">
+                <input type="text" id="search" class="form-control search" placeholder="Search for movies or keywords" />
+                <button class=" searchBtn" type="submit">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </form>
+          </div>
+        </div>
+       </nav>
+    </header>
+
+    <div class="container">
+        <div class="movieListTitle">
+            <h1>Movie List</h1>
+          </div>
+        <div class="row movies" id="movies"></div>    
+    </div>
+
+    <div id="result-heading"></div>
+    <div id="single-movie"></div>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+      <script src="assets/js/index.js"></script>
+</body>
+</html>
