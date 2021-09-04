@@ -15,7 +15,7 @@ function searchMovie(e) {
 
     // Kontrol edip devam ediyorum.
     if (term.trim()) {
-        fetch(`http://www.omdbapi.com/?s=${term}&apikey=2d073df8`)
+        fetch(`http://www.omdbapi.com/?s=${term}&apikey=7a7bebc7`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
