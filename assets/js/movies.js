@@ -3,7 +3,7 @@ function getMovie() {
     movieId = sessionStorage.getItem('movieId'); // Session da tuttuğum id'yi getirdim.
     console.log(movieId);
    var xhr = new XMLHttpRequest();
-   xhr.open('GET', 'http://www.omdbapi.com?i=' + movieId + '&apikey=2d073df8', true);
+   xhr.open('GET', 'http://www.omdbapi.com?i=' + movieId + '&apikey=7a7bebc7', true);
 
    xhr.onload = function () {
        if (xhr.status == 200) {
